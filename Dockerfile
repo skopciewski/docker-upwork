@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:artful
 
 ENV CONTAINER_USER=user
 ENV VERSION v4_2_153_0_tkzkho5lhz15j08q
