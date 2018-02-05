@@ -6,6 +6,7 @@ ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_0_1_442_9advad
 RUN apt-get update && apt-get install -y \
     gconf-service \
     gksu \
+    libappindicator1 \
     libasound2 \
     libatk1.0-0 \
     libcairo2 \
