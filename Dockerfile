@@ -1,7 +1,7 @@
 FROM ubuntu:artful
 
 ENV CONTAINER_USER=user
-ENV VERSION v4_2_153_0_tkzkho5lhz15j08q
+ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_0_1_442_9advaddbconscszu/upwork_5.0.1.442_amd64.deb
 
 RUN apt-get update && apt-get install -y \
     gconf-service \
@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-ADD https://updates-desktopapp.upwork.com/binaries/${VERSION}/upwork_amd64.deb /opt/upwork_amd64.deb
+ADD $VERSION_URL /opt/upwork_amd64.deb
 RUN dpkg -i /opt/upwork_amd64.deb 
 
 COPY data/entrypoint.sh /sbin/entrypoint.sh
