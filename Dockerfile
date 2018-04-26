@@ -1,7 +1,7 @@
 FROM ubuntu:artful
 
 ENV CONTAINER_USER=user
-ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_0_1_488_hswc0wjpb17l3rtw/upwork_5.1.0.488_amd64.deb
+ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_1_0_509_87zq7fllb6sf8y49/upwork_5.1.0.509_amd64.deb
 
 RUN apt-get update && apt-get install -y \
     gconf-service \
