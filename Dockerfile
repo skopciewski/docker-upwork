@@ -1,4 +1,4 @@
-FROM ubuntu:artful
+FROM ubuntu:rolling
 
 ENV CONTAINER_USER=user
 ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_1_0_523_888hfm3u1mp4laii/upwork_5.1.0.523_amd64.deb
