@@ -5,7 +5,6 @@ ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_1_0_523_888hfm
 
 RUN apt-get update && apt-get install -y \
     gconf-service \
-    gksu \
     libappindicator1 \
     libasound2 \
     libatk1.0-0 \
