@@ -1,7 +1,7 @@
 FROM ubuntu:rolling
 
 ENV CONTAINER_USER=user
-ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_1_0_523_888hfm3u1mp4laii/upwork_5.1.0.523_amd64.deb
+ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_1_0_562_f3wgs5ljinabm69t/upwork_5.1.0.562_amd64.deb
 
 RUN apt-get update && apt-get install -y \
     gconf-service \
