@@ -35,13 +35,18 @@ prepare_docker_env_parameters() {
 
 prepare_docker_volume_parameters() {
   VOLUMES+=" --volume=${HOME}/.Upwork:/home/${CONTAINER_USER}/.Upwork"
+  VOLUMES+=" --volume=${HOME}/.cache/Upwork:/home/${CONTAINER_USER}/.cache/Upwork"
+  VOLUMES+=" --volume=${HOME}/.config/Upwork:/home/${CONTAINER_USER}/.config/Upwork"
+  VOLUMES+=" --volume=${HOME}/.pki:/home/${CONTAINER_USER}/.pki"
   VOLUMES+=" --volume=${XSOCK}:${XSOCK}"
   VOLUMES+=" --volume=/run/user/${USER_UID}/pulse:/run/pulse"
+  VOLUMES+=" --volume=/var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket"
 }
 
 cleanup_stopped_upwork_instances
 prepare_docker_env_parameters
 prepare_docker_volume_parameters
+xhost +
 
 echo "Starting upwork..."
 docker run -d \
