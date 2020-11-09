@@ -1,7 +1,7 @@
 FROM ubuntu:rolling
 
 ENV CONTAINER_USER=user
-ENV VERSION_URL https://updates-desktopapp.upwork.com/binaries/v5_4_7_1_81f361962c74427d/upwork_5.4.7.1_amd64.deb
+ENV VERSION_URL https://upwork-usw2-desktopapp.upwork.com/binaries/v5_4_9_6_2565cdd0547940a2/upwork_5.4.9.6_amd64.deb
 
 ADD $VERSION_URL /opt/upwork_amd64.deb
 RUN apt-get update \
