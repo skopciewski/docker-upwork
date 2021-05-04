@@ -1,4 +1,4 @@
-FROM ubuntu:rolling
+FROM ubuntu:20.04
 
 ENV CONTAINER_USER=user
 ENV VERSION_URL https://upwork-usw2-desktopapp.upwork.com/binaries/v5_5_0_11_61df9c99b6df4e7b/upwork-5.5.0.11-1fc24.x86_64.rpm
