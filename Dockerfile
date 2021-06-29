@@ -5,7 +5,7 @@ ENV VERSION_URL https://upwork-usw2-desktopapp.upwork.com/binaries/v5_6_6_12_04a
 
 ADD $VERSION_URL /opt/upwork_amd64.deb
 RUN apt-get update \
-  && apt-get install -y sudo libx11-xcb1 libdrm2 \
+  && apt-get install -y sudo libx11-xcb1 libdrm2 libgbm1 \
   && dpkg -i /opt/upwork_amd64.deb || true \
   && apt-get install -f -y \
   && rm -rf /var/lib/apt/lists/*
