@@ -11,13 +11,13 @@ build:
 
 push:
 	docker push skopciewski/upwork:$(UPV)
-	docker tag skopciewski/upwork:$(UPV) skopciewski/devenv-ruby:$(UPV)_$(TM)
-	docker tag skopciewski/upwork:$(UPV) skopciewski/devenv-ruby:latest
+	docker tag skopciewski/upwork:$(UPV) skopciewski/upwork:$(UPV)_$(TM)
+	docker tag skopciewski/upwork:$(UPV) skopciewski/upwork:latest
 	docker push skopciewski/upwork:$(UPV)_$(TM)
 	docker push skopciewski/upwork:latest
 
 .PHONY: push
 
 push_all:
-	docker push skopciewski/devenv-ruby
+	docker push skopciewski/upwork
 .PHONY: push_all
