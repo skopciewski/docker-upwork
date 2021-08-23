@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ENV CONTAINER_USER=user
-ENV VERSION_URL https://upwork-usw2-desktopapp.upwork.com/binaries/v5_6_7_13_9f0e0a44a59e4331/upwork_5.6.7.13_amd64.deb
+ENV VERSION_URL https://upwork-usw2-desktopapp.upwork.com/binaries/v5_6_8_0_836f43f6f6be4149/upwork_5.6.8.0_amd64.deb
 
 ADD $VERSION_URL /opt/upwork_amd64.deb
 RUN apt-get update \
